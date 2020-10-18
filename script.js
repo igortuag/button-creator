@@ -47,7 +47,7 @@ function setValues() {
   const properties = Object.keys(localStorage);
   properties.forEach((prop) => {
     handleStyle[prop](localStorage[prop]);
-    controles.elements[prop].value = prop.value[prop];
+    controles.elements[prop].value = localStorage[prop];
   });
   showCss();
 }
