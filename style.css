@@ -30,14 +30,20 @@ input {
 }
 
 .css {
+  padding: 12px;
   font-family: "IBM Plex Mono", monospace;
   color: #333;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+
+  background: #2a2a40;
+  color: #8be9fd;
+  border-radius: 8px;
+  line-height: 12px;
 }
 
 .css span {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
