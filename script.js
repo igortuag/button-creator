@@ -39,8 +39,24 @@ function handleChange(event) {
   const value = event.target.value;
 
   handleStyle[name](value);
+  saveValues(name, value);
   showCss();
 }
+
+function setValues() {
+  const properties = Object.keys(localStorage);
+  properties.forEach((prop) => {
+    handleStyle[prop](localStorage[prop]);
+    controles.elements[prop].value = prop.value[prop];
+  });
+  showCss();
+}
+
+function saveValues(name, value) {
+  localStorage[name] = value;
+}
+
+setValues();
 
 function showCss() {
   cssText.innerHTML =
